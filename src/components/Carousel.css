@@ -1,0 +1,46 @@
+
+/* Carousel CSS*/
+
+#carousel-container {
+  margin: 10 auto;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  width:683px !important;
+  height: 615px !important;
+}
+
+.carousel-items {
+  top: 200px;
+  position: relative;
+}
+
+.carousel-img {
+  box-sizing: border-box;
+  padding: 36px;
+  position: absolute;
+  width: 100% !important;
+  height: auto !important;
+  text-align: center;
+  border-radius: 4px;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  animation: slide-item 25s infinite;
+  animation-timing-function: linear;
+  opacity: 0;
+}
+
+.carousel-img:nth-child(1) { animation-delay: 0s; }
+.carousel-img:nth-child(2) { animation-delay: 9s; }
+.carousel-img:nth-child(3) { animation-delay: 18s; }
+.carousel-img:nth-child(4) { animation-delay: 23s; }
+
+@keyframes slide-item {
+    0% { left: -100%; opacity: 0; }
+  25% { left:  -50%; opacity: 0; }
+  32% { opacity: 0.0; }
+  38% { left:  45%; opacity: 0.5; }
+  62% { left:  55%; opacity: 0.5; }
+  82% { opacity: 0.0; }
+   85% { left: 100%; opacity: 0; }
+  100% { left: 150%; opacity: .0; }
+}
