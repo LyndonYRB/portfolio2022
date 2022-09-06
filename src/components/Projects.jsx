@@ -47,10 +47,7 @@ export default function Projects() {
                   }
                 >
                   <h2>Projects</h2>
-                  <p>
-                    These are from project I've start while at bootcamp as well
-                    as project I've done from online tutorials.
-                  </p>
+                  <p>Here are a few samples of projects I've worked on.</p>
                 </div>
               )}
             </TrackVisibility>
