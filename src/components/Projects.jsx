@@ -4,6 +4,8 @@ import colorSharp2 from "../materials/color-sharp2.png";
 import projImg1 from "../materials/project-img1.png";
 import projImg2 from "../materials/project-img2.png";
 import projImg3 from "../materials/project-img3.png";
+import projImg4 from "../materials/project-img4.png";
+
 import "animate.css";
 import TrackVisibility from "react-on-screen";
 
@@ -31,6 +33,13 @@ export default function Projects() {
       imgUrl: projImg3,
       projectUrl: "https://flask--manager-app.herokuapp.com/",
       gitHubUrl: "https://github.com/LyndonYRB/basic-blog-APP",
+    },
+    {
+      title: "Cryto Dashboard",
+      description: `This app shows the up-to-date cryptocurrency exchange rate for BTC, ETH, LTC, XRP and ADA as well as the lastest new in regards to cryptocurrency. This app was made using Reactjs, the APIs used are Alpha Vantage and Crytocurrency Live.`,
+      imgUrl: projImg4,
+      projectUrl: "https://lyndons-crypto-dashboard.netlify.app/",
+      gitHubUrl: "https://github.com/LyndonYRB/crypto-dashboard",
     },
   ];
 
