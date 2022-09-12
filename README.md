@@ -1,5 +1,7 @@
 # New Portfolio site
 
+![Screenshot](/lyndon-portfolio/src/materials/git-screenshot.png)
+
 I made built this using judygab's youtube tutorial for a foundation and added my own images, Here's a link to her tutorial https://www.youtube.com/watch?v=hYv6BM2fWd8 (shout out to her).
 
 This site was built using:
