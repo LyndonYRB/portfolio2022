@@ -79,7 +79,7 @@ export default function NavBar() {
                 <a href="https://github.com/LyndonYRB">
                   <img src={navIcon2} alt="github" />
                 </a>
-                <a href="https://drive.google.com/file/d/1-e15UO7RoTvra396NNwtV4I_fxutVWPy/view?usp=sharing">
+                <a href="https://drive.google.com/file/d/1-eGog5EYTi0-4rvtedMNduqDQC3C8saQ/view?usp=sharing">
                   <img src={navIcon3} alt="resume" />
                 </a>
               </div>
