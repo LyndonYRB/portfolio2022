@@ -235,57 +235,185 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 /* Banner CSS */
 .banner {
   margin-top: 0;
-  padding: 260px 0 100px 0;
+  padding: 190px 0 120px 0;
   background-image: url('./materials/banner-bg.png');
   background-position: top center;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
-  
+  position: relative;
 }
-.banner .tagline {
-  font-weight: 700;
-  letter-spacing: 0.8px;
-  padding: 8px 10px;
-  font-size: 20px;
-  margin-bottom: 16px;
-  display: inline-block;
+.banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(18, 18, 18, 0.78) 0%, rgba(18, 18, 18, 0.92) 100%);
+  pointer-events: none;
+}
+.banner .container {
+  position: relative;
+  z-index: 1;
+}
+.banner-row {
+  min-height: 72vh;
+}
+.banner-copy {
+  max-width: 620px;
+}
+.banner-kicker {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+  color: #D4DCEA;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
 }
 .banner h1 {
-  font-size: 52px;
+  max-width: 11ch;
+  font-size: clamp(3.2rem, 6vw, 5.4rem);
   font-weight: 700;
-  letter-spacing: 0.8px;
-  line-height: 1;
-  margin-bottom: 20px;
-  display: block;
+  letter-spacing: -0.04em;
+  line-height: 0.98;
+  margin-bottom: 24px;
+  text-wrap: balance;
 }
-.banner p {
-  color: #B8B8B8;
-  font-size: 18px;
-  letter-spacing: 0.8px;
-  line-height: 1.5em;
-  width: 96%;
+.banner .banner-lead {
+  color: #D7DDE8;
+  font-size: 1.15rem;
+  line-height: 1.7;
+  max-width: 52ch;
+  margin-bottom: 18px;
 }
-.banner button {
-  color: #fff;
-  font-weight: 700;
-  font-size: 20px;
-  margin-top: 60px;
-  letter-spacing: 0.8px;
+.banner .banner-credibility {
+  color: #9FAABD;
+  font-size: 1rem;
+  line-height: 1.7;
+  max-width: 50ch;
+  margin-bottom: 36px;
+}
+.banner-actions {
   display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+.banner-btn {
+  display: inline-flex;
   align-items: center;
+  justify-content: center;
+  min-width: 170px;
+  padding: 16px 24px;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
-.banner button svg {
-  font-size: 25px;
-  margin-left: 10px;
-  transition: 0.3s ease-in-out;
-  line-height: 1;
+.banner-btn:hover {
+  transform: translateY(-1px);
 }
-.banner button:hover svg {
-  margin-left: 25px;
+.banner-btn-primary {
+  background: #F3F7FC;
+  color: #111827;
+}
+.banner-btn-primary:hover {
+  color: #111827;
+  background: #FFFFFF;
+}
+.banner-btn-secondary {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.02);
+  color: #E8EEF8;
+}
+.banner-btn-secondary:hover {
+  color: #FFFFFF;
+  border-color: rgba(255, 255, 255, 0.28);
+  background: rgba(255, 255, 255, 0.06);
+}
+.banner-visual {
+  display: flex;
+  justify-content: flex-end;
+}
+.banner-visual-frame {
+  width: min(100%, 520px);
+  min-height: 420px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 28px 10px 0;
+  border-radius: 36px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.015) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  overflow: hidden;
+}
+.banner-skyline {
+  width: 100%;
+  max-width: 500px;
+  opacity: 0.4;
+  filter: saturate(0.7);
 }
 
-.txt-rotate > .wrap {
-  border-right: 0.08em solid #666;
+@media (max-width: 991px) {
+  .banner {
+    padding: 150px 0 90px 0;
+  }
+  .banner-row {
+    min-height: auto;
+    row-gap: 36px;
+  }
+  .banner-copy {
+    max-width: none;
+  }
+  .banner h1 {
+    max-width: 12ch;
+  }
+  .banner-visual {
+    justify-content: flex-start;
+  }
+  .banner-visual-frame {
+    width: 100%;
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 767px) {
+  .banner {
+    padding: 135px 0 72px 0;
+  }
+  .banner-kicker {
+    margin-bottom: 18px;
+  }
+  .banner h1 {
+    max-width: none;
+    margin-bottom: 18px;
+  }
+  .banner .banner-lead {
+    font-size: 1.05rem;
+  }
+  .banner .banner-credibility {
+    font-size: 0.95rem;
+    margin-bottom: 28px;
+  }
+  .banner-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .banner-btn {
+    width: 100%;
+  }
+  .banner-visual-frame {
+    min-height: 220px;
+    padding-top: 16px;
+    border-radius: 28px;
+  }
+  .banner-skyline {
+    opacity: 0.32;
+  }
 }
 
 /* Skills */
