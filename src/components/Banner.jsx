@@ -9,15 +9,15 @@ export const Banner = () => {
           <Col xs={12} lg={7}>
             <div className="banner-copy">
               <span className="banner-kicker">Software Engineer</span>
-              <h1>Building AI-powered web applications with product focus.</h1>
+              <h1>Software Engineer Building AI-Powered Web Applications</h1>
               <p className="banner-lead">
-                I build full-stack experiences with React, Next.js, Python, and
-                LLM-powered systems that are fast, useful, and designed for
-                real-world impact.
+                M.S. Computer Science candidate building full-stack
+                applications with React, Next.js, Python, and LLM-powered
+                systems.
               </p>
               <p className="banner-credibility">
-                Full-stack engineer with a disciplined operations background and
-                a practical approach to shipping reliable software.
+                Army veteran &bull; Full-stack projects &bull; User-focused
+                product development
               </p>
               <div className="banner-actions">
                 <a href="#project" className="banner-btn banner-btn-primary">
