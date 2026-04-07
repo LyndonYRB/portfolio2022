@@ -17,13 +17,13 @@ export default function Footer() {
           <Col sm={6} className="text-center text-sm-end">
             <div className="social-icon">
               <a href="https://www.linkedin.com/in/lyndon-stluce/">
-                <img src={navIcon1} />
+                <img src={navIcon1} alt="LinkedIn" />
               </a>
               <a href="https://github.com/LyndonYRB">
-                <img src={navIcon2} />
+                <img src={navIcon2} alt="GitHub" />
               </a>
-              <a href="https://drive.google.com/file/d/10qs9hkFxTMqsHEV1wn4WdZHQ29fmoyon/view">
-                <img src={navIcon3} />
+              <a href="/Lyndon-St-Luce-Resume.pdf">
+                <img src={navIcon3} alt="Resume" />
               </a>
             </div>
             <p>CopyRight 2022. All Rights Reserved</p>

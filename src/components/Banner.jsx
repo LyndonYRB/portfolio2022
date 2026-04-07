@@ -24,7 +24,7 @@ export const Banner = () => {
                   View Projects
                 </a>
                 <a
-                  href="https://drive.google.com/file/d/1-eGog5EYTi0-4rvtedMNduqDQC3C8saQ/view?usp=sharing"
+                  href="/Lyndon-St-Luce-Resume.pdf"
                   className="banner-btn banner-btn-secondary"
                 >
                   Resume

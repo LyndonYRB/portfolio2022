@@ -5,21 +5,39 @@ import navIcon1 from "../materials/nav-icon1.svg";
 import navIcon2 from "../materials/nav-icon2.png";
 import navIcon3 from "../materials/nav-icon3.png";
 
-import { BrowserRouter as Router } from "react-router-dom";
-
 export default function NavBar() {
   const [activeLink, setActiveLink] = useState("home");
   const [scrolled, setScrolled] = useState(false);
+  const [expanded, setExpanded] = useState(false);
 
   useEffect(() => {
     const onScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
+      const scrollPosition = window.scrollY;
+      setScrolled(scrollPosition > 24);
+
+      const sectionIds = ["home", "skills", "project"];
+      const activeSection = sectionIds.find((id, index) => {
+        const section = document.getElementById(id);
+
+        if (!section) return false;
+
+        const sectionTop = section.offsetTop - 120;
+        const nextSection = sectionIds[index + 1]
+          ? document.getElementById(sectionIds[index + 1])
+          : null;
+        const sectionBottom = nextSection
+          ? nextSection.offsetTop - 120
+          : document.body.scrollHeight;
+
+        return scrollPosition >= sectionTop && scrollPosition < sectionBottom;
+      });
+
+      if (activeSection) {
+        setActiveLink(activeSection);
       }
     };
 
+    onScroll();
     window.addEventListener("scroll", onScroll);
 
     return () => window.removeEventListener("scroll", onScroll);
@@ -27,20 +45,28 @@ export default function NavBar() {
 
   const onUpdateActiveLink = (value) => {
     setActiveLink(value);
+    setExpanded(false);
   };
 
   return (
-    <Router>
-      <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
+      <Navbar
+        expand="lg"
+        fixed="top"
+        expanded={expanded}
+        className={scrolled ? "scrolled" : ""}
+      >
         <Container>
           <Navbar.Brand href="/">
             <img className="logo-img" src={logo} alt="Logo" />
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav">
+          <Navbar.Toggle
+            aria-controls="basic-navbar-nav"
+            onClick={() => setExpanded((prevExpanded) => !prevExpanded)}
+          >
             <span className="navbar-toggler-icon"></span>
           </Navbar.Toggle>
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="ms-auto">
+            <Nav className="ms-auto align-items-lg-center">
               <Nav.Link
                 href="#home"
                 className={
@@ -79,7 +105,7 @@ export default function NavBar() {
                 <a href="https://github.com/LyndonYRB">
                   <img src={navIcon2} alt="github" />
                 </a>
-                <a href="https://drive.google.com/file/d/1-eGog5EYTi0-4rvtedMNduqDQC3C8saQ/view?usp=sharing">
+                <a href="/Lyndon-St-Luce-Resume.pdf">
                   <img src={navIcon3} alt="resume" />
                 </a>
               </div>
@@ -87,6 +113,5 @@ export default function NavBar() {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-    </Router>
   );
 }
