@@ -1,15 +1,35 @@
-# New Portfolio site
+# Lyndon St. Luce Portfolio
 
-<img src="https://github.com/LyndonYRB/portfolio2022/blob/main/src/materials/git-screenshot.png?raw=true" width="600px">
+A modern software engineering portfolio highlighting full-stack web, AI-powered, and Android application projects.
 
-I made built this using judygab's youtube tutorial for a foundation and added my own images, Here's a link to her tutorial https://www.youtube.com/watch?v=hYv6BM2fWd8 (shout out to her).
+## Featured Projects
 
-This site was built using:
+### Manhattan Arcades
+A polished location-based discovery app for exploring Manhattan arcade venues with venue details, reviews, and transit-aware browsing.
 
-Front-end library: React
-CSS framework: React-bootstrap
-CSS animations library: Animate.css
+**Tech:** React, Node.js, Express, PostgreSQL, Authentication
 
-#Deployed site
+### QuizML.ai
+An AI-powered learning platform that turns uploaded PDFs into adaptive micro-lessons, quizzes, and remediation loops using retrieval, embeddings, and structured generation.
 
-https://lyndon-portfolio.netlify.app/
+**Tech:** Next.js, TypeScript, Supabase, PostgreSQL, pgvector, OpenAI, Stripe, Vercel
+
+### Asylum Seeker Log App
+A Kotlin Android app that digitizes real-world occupant tracking and incident logging workflows using Firebase-backed data and structured log management.
+
+**Tech:** Kotlin, Android Studio, Firebase Realtime Database, Firebase Auth, iText PDF
+
+## Tech Stack
+
+- React
+- React Bootstrap
+- Animate.css
+- Custom CSS
+
+## Live Site
+
+[lyndon-portfolio.netlify.app](https://lyndon-portfolio.netlify.app/)
+
+## Notes
+
+This portfolio was originally built on an earlier React foundation and has since been significantly redesigned and expanded to better reflect my current work and projects.
