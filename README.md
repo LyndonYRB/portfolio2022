@@ -2,6 +2,8 @@
 
 A modern software engineering portfolio highlighting full-stack web, AI-powered, and Android application projects.
 
+<img src="https://github.com/LyndonYRB/portfolio2022/blob/main/src/materials/git-screenshot.png?raw=true" width="600px">
+
 ## Featured Projects
 
 ### Manhattan Arcades
