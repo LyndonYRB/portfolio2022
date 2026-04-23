@@ -12,21 +12,36 @@ export default function Footer() {
         <br></br>
         <Row className="align-item-center">
           <Col sm={6}>
-            <img className="footer-logo-img" src={logo} alt="Logo" />
+            <img className="footer-logo-img" src={logo} alt="Lyndon St. Luce" />
           </Col>
           <Col sm={6} className="text-center text-sm-end">
             <div className="social-icon">
-              <a href="https://www.linkedin.com/in/lyndon-stluce/">
-                <img src={navIcon1} alt="LinkedIn" />
+              <a
+                href="https://www.linkedin.com/in/lyndon-stluce/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="LinkedIn"
+              >
+                <img src={navIcon1} alt="" />
               </a>
-              <a href="https://github.com/LyndonYRB">
-                <img src={navIcon2} alt="GitHub" />
+              <a
+                href="https://github.com/LyndonYRB"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="GitHub"
+              >
+                <img src={navIcon2} alt="" />
               </a>
-              <a href="/Lyndon-St-Luce-Resume.pdf">
-                <img src={navIcon3} alt="Resume" />
+              <a
+                href="/Lyndon-St-Luce-Resume.pdf"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Resume"
+              >
+                <img src={navIcon3} alt="" />
               </a>
             </div>
-            <p>CopyRight 2022. All Rights Reserved</p>
+            <p>Copyright 2026 Lyndon St. Luce. All rights reserved.</p>
           </Col>
         </Row>
       </Container>

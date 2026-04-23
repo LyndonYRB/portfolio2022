@@ -12,7 +12,7 @@ export const Banner = () => {
               <h1>Software Engineer Building AI-Powered Web Applications</h1>
               <p className="banner-lead">
                 M.S. Computer Science candidate building full-stack
-                applications with React, Next.js, Python, and LLM-powered
+                applications with React, Next.js, TypeScript, and LLM-powered
                 systems.
               </p>
               <p className="banner-credibility">

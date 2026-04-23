@@ -1,53 +1,87 @@
-import { useState } from "react";
-import { Col, Modal } from "react-bootstrap";
+import { Col } from "react-bootstrap";
+
+const isPlaceholderUrl = (url) => !url || url.startsWith("REPLACE_WITH_");
+const isPlaceholderValue = (value) =>
+  typeof value === "string" && value.startsWith("REPLACE_WITH_");
 
 export default function ProjectCard({
   title,
-  imgUrl,
-  projectUrl,
-  gitHubUrl,
-  description,
+  label,
+  summary,
+  techStack = [],
+  impact,
+  demoUrl,
+  repoUrl,
+  primaryCtaLabel = "Live Demo",
+  secondaryCtaLabel = "GitHub",
+  image,
 }) {
-  const [showModal, setShowModal] = useState(false);
-  const handleShowModal = () => setShowModal(true);
-  const handleCloseModal = () => setShowModal(false);
-  return (
-    <Col size={12} sm={6} md={4}>
-      <div className="proj-imgbx">
-        <img src={imgUrl} alt="" />
-        <div className="proj-txtx">
-          <h4>{title}</h4>
-          <span>
-            <div className="proj-links">
-              <a href={projectUrl} className="proj-link">
-                <button>Deployed Site</button>
-              </a>
-              <a href={gitHubUrl} className="proj-link">
-                <button>Github</button>
-              </a>
-              <br></br>
-              <br></br>
-              <span className="proj-link">
-                <button onClick={handleShowModal}>More Info</button>
+  const hasDemo = !isPlaceholderUrl(demoUrl);
+  const hasRepo = !isPlaceholderUrl(repoUrl);
+  const visibleTechStack = techStack.filter((item) => !isPlaceholderValue(item));
 
-                <Modal show={showModal} onHide={handleCloseModal}>
-                  <Modal.Header>{title}</Modal.Header>
-                  <Modal.Body>
-                    <p>{description}</p>
-                  </Modal.Body>
-                  <Modal.Footer>
-                    <span className="proj-link">
-                      <button className="close-btn" onClick={handleCloseModal}>
-                        Close
-                      </button>
-                    </span>
-                  </Modal.Footer>
-                </Modal>
-              </span>
-            </div>
-          </span>
+  return (
+    <Col xs={12} md={6} xl={4} className="d-flex">
+      <article className="project-card">
+        <div className="project-card-media">
+          <img src={image} alt={`${title} preview`} />
+          <span className="project-card-label">{label}</span>
         </div>
-      </div>
+
+        <div className="project-card-body">
+          <div className="project-card-copy">
+            <h3>{title}</h3>
+            <p className="project-card-summary">{summary}</p>
+            <p className="project-card-impact">{impact}</p>
+          </div>
+
+          {visibleTechStack.length > 0 && (
+            <ul className="project-card-stack" aria-label={`${title} tech stack`}>
+              {visibleTechStack.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          )}
+
+          <div className="project-card-actions">
+            {hasDemo ? (
+              <a
+                href={demoUrl}
+                className="project-card-link project-card-link-primary"
+                target="_blank"
+                rel="noreferrer"
+              >
+                {primaryCtaLabel}
+              </a>
+            ) : (
+              <span
+                className="project-card-link project-card-link-disabled"
+                aria-disabled="true"
+              >
+                {primaryCtaLabel}
+              </span>
+            )}
+
+            {hasRepo ? (
+              <a
+                href={repoUrl}
+                className="project-card-link project-card-link-secondary"
+                target="_blank"
+                rel="noreferrer"
+              >
+                {secondaryCtaLabel}
+              </a>
+            ) : (
+              <span
+                className="project-card-link project-card-link-disabled"
+                aria-disabled="true"
+              >
+                {secondaryCtaLabel}
+              </span>
+            )}
+          </div>
+        </div>
+      </article>
     </Col>
   );
 }

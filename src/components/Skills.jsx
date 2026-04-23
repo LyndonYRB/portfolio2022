@@ -1,106 +1,64 @@
 import { Col, Container, Row } from "react-bootstrap";
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
-import iconJS from "../materials/js.png";
-import iconCSS from "../materials/css.png";
-import iconHTML from "../materials/html.png";
-import iconReact from "../materials/react.png";
-import iconMongo from "../materials/mongodb.png";
-import iconExpress from "../materials/express.png";
-import iconNode from "../materials/node.png";
-import iconPython from "../materials/python.png";
-import iconFlask from "../materials/flask.png";
-import iconDjango from "../materials/django.png";
-import iconPostgres from "../materials/postgresql.png";
-import colorSharp from "../materials/color-sharp.png";
+
+const skillGroups = [
+  {
+    title: "Frontend",
+    summary: "Production React interfaces with typed Next.js workflows.",
+    skills: ["React", "Next.js", "TypeScript", "JavaScript", "HTML", "CSS"],
+  },
+  {
+    title: "Backend & APIs",
+    summary: "Service layers for full-stack products and mobile workflows.",
+    skills: ["Node.js", "Express", "REST APIs", "Firebase"],
+  },
+  {
+    title: "Data & Platforms",
+    summary: "Relational data, auth-backed app platforms, and vector search.",
+    skills: ["PostgreSQL", "Supabase", "pgvector"],
+  },
+  {
+    title: "AI & Product Systems",
+    summary: "AI learning flows, retrieval pipelines, payments, and deployment.",
+    skills: ["OpenAI", "RAG", "Embeddings", "Stripe", "Vercel"],
+  },
+  {
+    title: "Mobile",
+    summary: "Native Android development for structured field workflows.",
+    skills: ["Kotlin", "Android Studio"],
+  },
+];
 
 export default function Skills() {
-  const responsive = {
-    superLargeDesktop: {
-      breakpoint: { max: 4000, min: 3000 },
-      items: 5,
-    },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 3,
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2,
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1,
-    },
-  };
-
   return (
     <section className="skill" id="skills">
       <Container>
         <Row>
           <Col>
             <div className="skill-bx">
-              <h2>Skills</h2>
-
+              <span className="skill-kicker">Technical Focus</span>
+              <h2>Skills Proven Through Current Projects</h2>
               <p>
-                These are the languages and frameworks I've learned to use from
-                bootcamp and reading tutorials.
+                A focused stack across full-stack web apps, AI-assisted learning
+                systems, data-backed products, and Android workflows.
               </p>
-              <Carousel
-                responsive={responsive}
-                infinite={true}
-                className="skill-slider"
-              >
-                <div className="item">
-                  <img src={iconJS} alt="Image1" />
-                  <h5>JavaScript</h5>
-                </div>
-                <div className="item">
-                  <img src={iconHTML} alt="Image2" />
-                  <h5>HTML</h5>
-                </div>
-                <div className="item">
-                  <img src={iconCSS} alt="Image3" />
-                  <h5>CSS</h5>
-                </div>
-                <div className="item">
-                  <img src={iconNode} alt="Image4" />
-                  <h5>Node</h5>
-                </div>
-                <div className="item">
-                  <img src={iconExpress} alt="Image4" />
-                  <h5>Express</h5>
-                </div>
-                <div className="item">
-                  <img src={iconMongo} alt="Image4" />
-                  <h5>MongoDB</h5>
-                </div>
-                <div className="item">
-                  <img src={iconPython} alt="Image4" />
-                  <h5>Python</h5>
-                </div>
-                <div className="item">
-                  <img src={iconFlask} alt="Image4" />
-                  <h5>Flask</h5>
-                </div>
-                <div className="item">
-                  <img src={iconPostgres} alt="Image4" />
-                  <h5>PostgreSQL</h5>
-                </div>
-                <div className="item">
-                  <img src={iconDjango} alt="Image4" />
-                  <h5>Django</h5>
-                </div>
-                <div className="item">
-                  <img src={iconReact} alt="Image4" />
-                  <h5>React</h5>
-                </div>
-              </Carousel>
+
+              <div className="skill-grid">
+                {skillGroups.map((group) => (
+                  <article className="skill-group" key={group.title}>
+                    <h3>{group.title}</h3>
+                    <p>{group.summary}</p>
+                    <ul>
+                      {group.skills.map((skill) => (
+                        <li key={skill}>{skill}</li>
+                      ))}
+                    </ul>
+                  </article>
+                ))}
+              </div>
             </div>
           </Col>
         </Row>
       </Container>
-      <img className="background-image-left" alt="" src={colorSharp} />
     </section>
   );
 }

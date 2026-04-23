@@ -57,7 +57,7 @@ export default function NavBar() {
       >
         <Container>
           <Navbar.Brand href="/">
-            <img className="logo-img" src={logo} alt="Logo" />
+            <img className="logo-img" src={logo} alt="Lyndon St. Luce" />
           </Navbar.Brand>
           <Navbar.Toggle
             aria-controls="basic-navbar-nav"
@@ -99,14 +99,29 @@ export default function NavBar() {
             </Nav>
             <span className="navbar-text">
               <div className="social-icon">
-                <a href="https://www.linkedin.com/in/lyndon-stluce/">
-                  <img src={navIcon1} alt="linkedIn" />
+                <a
+                  href="https://www.linkedin.com/in/lyndon-stluce/"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="LinkedIn"
+                >
+                  <img src={navIcon1} alt="" />
                 </a>
-                <a href="https://github.com/LyndonYRB">
-                  <img src={navIcon2} alt="github" />
+                <a
+                  href="https://github.com/LyndonYRB"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="GitHub"
+                >
+                  <img src={navIcon2} alt="" />
                 </a>
-                <a href="/Lyndon-St-Luce-Resume.pdf">
-                  <img src={navIcon3} alt="resume" />
+                <a
+                  href="/Lyndon-St-Luce-Resume.pdf"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Resume"
+                >
+                  <img src={navIcon3} alt="" />
                 </a>
               </div>
             </span>
