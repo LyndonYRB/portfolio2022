@@ -1,16 +1,25 @@
-import manhattanArcadesImg from "../assets/projects/manhattan-arcades.png";
+import manhattanArcadesImg from "../assets/projects/manhattan-arcades-gis.png";
 import asylumSeekerDashboardImg from "../assets/projects/asylum-seeker-dashboard.png";
 import quizmlImg from "../assets/projects/quizml.png";
 
 const featuredProjects = [
   {
     title: "Manhattan Arcades",
-    label: "Full-Stack App",
+    label: "Full-Stack Geospatial Discovery Platform",
     summary:
-      "A polished location-based discovery app for exploring Manhattan arcade venues with venue details, reviews, and transit-aware browsing.",
-    techStack: ["React", "Node.js", "Express", "PostgreSQL", "Authentication"],
+      "Full-stack geospatial discovery platform for exploring arcade venues across Manhattan using React, Leaflet, Express, PostgreSQL/PostGIS, GeoJSON, and distance-based spatial queries.",
+    techStack: [
+      "React",
+      "Leaflet",
+      "Node.js",
+      "Express",
+      "PostgreSQL",
+      "PostGIS",
+      "GeoJSON",
+      "JWT",
+    ],
     impact:
-      "Demonstrates responsive frontend execution, backend integration, and product thinking around real-world venue discovery.",
+      "Features an interactive Leaflet map, GeoJSON venue endpoints, PostGIS geography(Point, 4326) storage, ST_DWithin/ST_Distance nearby search, spatial GiST indexing, marker popups, responsive UI, and preserved auth/review flows.",
     demoUrl: "https://manhattan-arcades-app-f2e0f81c5116.herokuapp.com/",
     repoUrl: "https://github.com/LyndonYRB/Manhattan-Arcades",
     image: manhattanArcadesImg,

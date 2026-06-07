@@ -7,9 +7,11 @@ A modern software engineering portfolio highlighting full-stack web, AI-powered,
 ## Featured Projects
 
 ### Manhattan Arcades
-A polished location-based discovery app for exploring Manhattan arcade venues with venue details, reviews, and transit-aware browsing.
+Full-stack geospatial discovery platform for exploring arcade venues across Manhattan using React, Leaflet, Express, PostgreSQL/PostGIS, GeoJSON, and distance-based spatial queries.
 
-**Tech:** React, Node.js, Express, PostgreSQL, Authentication
+**Tech:** React, Leaflet, Node.js, Express, PostgreSQL, PostGIS, GeoJSON, JWT
+
+**Highlights:** Interactive Leaflet map, PostGIS geography(Point, 4326) venue coordinates, GeoJSON FeatureCollection endpoint, nearby venue search with ST_DWithin and ST_Distance, spatial GiST index, marker popups linked to venue detail pages, responsive UI, and preserved auth/review features.
 
 ### QuizML.ai
 An AI-powered learning platform that turns uploaded PDFs into adaptive micro-lessons, quizzes, and remediation loops using retrieval, embeddings, and structured generation.
