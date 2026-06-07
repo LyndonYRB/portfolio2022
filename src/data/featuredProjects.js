@@ -7,7 +7,7 @@ const featuredProjects = [
     title: "Manhattan Arcades",
     label: "Full-Stack Geospatial Discovery Platform",
     summary:
-      "Full-stack geospatial discovery platform for exploring arcade venues across Manhattan using React, Leaflet, Express, PostgreSQL/PostGIS, GeoJSON, and distance-based spatial queries.",
+      "Full-stack geospatial discovery platform for exploring Manhattan arcade venues with an interactive Leaflet map, PostGIS-backed venue data, GeoJSON endpoints, and distance-based spatial search.",
     techStack: [
       "React",
       "Leaflet",
@@ -19,7 +19,7 @@ const featuredProjects = [
       "JWT",
     ],
     impact:
-      "Features an interactive Leaflet map, GeoJSON venue endpoints, PostGIS geography(Point, 4326) storage, ST_DWithin/ST_Distance nearby search, spatial GiST indexing, marker popups, responsive UI, and preserved auth/review flows.",
+      "Combines venue browsing, marker popups, responsive UI, authenticated reviews, and PostGIS spatial queries into a practical location-aware discovery experience.",
     demoUrl: "https://manhattan-arcades-app-f2e0f81c5116.herokuapp.com/",
     repoUrl: "https://github.com/LyndonYRB/Manhattan-Arcades",
     image: manhattanArcadesImg,
