@@ -1,6 +1,6 @@
 import manhattanArcadesImg from "../assets/projects/manhattan-arcades-gis.png";
 import asylumSeekerDashboardImg from "../assets/projects/asylum-seeker-dashboard.png";
-import quizmlImg from "../assets/projects/quizml.png";
+import ntrasemImg from "../assets/projects/ntrasem.png";
 
 const featuredProjects = [
   {
@@ -25,26 +25,26 @@ const featuredProjects = [
     image: manhattanArcadesImg,
   },
   {
-    title: "QuizML.ai",
-    label: "AI Learning Platform",
+    title: "NTRASEM",
+    label: "AI-Powered SIEM Triage Platform",
     summary:
-      "An AI-powered learning platform that turns uploaded PDFs into adaptive micro-lessons, quizzes, and remediation loops using retrieval, embeddings, and structured generation.",
+      "Local-first AI-powered SIEM triage platform that ingests mock firewall, DNS, and SIEM alert data, normalizes events, generates redacted incident briefs, and exports full or safe reports.",
     techStack: [
       "Next.js",
       "TypeScript",
-      "Supabase",
-      "PostgreSQL",
-      "pgvector",
-      "OpenAI",
-      "Stripe",
-      "Vercel",
+      "Go",
+      "Python",
+      "FastAPI",
+      "Cybersecurity",
+      "SIEM",
+      "SOC Workflow",
+      "Data Redaction",
     ],
     impact:
-      "Combines multi-document ingestion, RAG-based lesson generation, mastery enforcement, and subscription-backed product logic into a full-stack AI learning system.",
-    demoUrl:
-      "https://quizml-49chxx1n8-lyndonstluce-5610s-projects.vercel.app/",
-    repoUrl: "https://github.com/LyndonYRB/quizml",
-    image: quizmlImg,
+      "Combines Go-based event ingestion, Python/FastAPI redaction and mock AI analysis, and a Next.js frontend into an end-to-end SOC-style triage workflow inspired by Cyber State Active Duty mission operations.",
+    demoUrl: "",
+    repoUrl: "",
+    image: ntrasemImg,
   },
   {
     title: "Asylum Seeker Log App",
